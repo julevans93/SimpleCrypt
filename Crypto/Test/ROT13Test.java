@@ -1,4 +1,9 @@
+package Test;
+
 import org.junit.Test;
+import src.ROT13;
+
+import java.security.InvalidKeyException;
 
 import static org.junit.Assert.*;
 
@@ -49,7 +54,7 @@ public class ROT13Test {
     }
 
     @Test
-    public void cryptTest1() {
+    public void cryptTest1() throws InvalidKeyException {
         // Given
         ROT13 cipher = new ROT13('a', 'n');
 
@@ -74,7 +79,7 @@ public class ROT13Test {
         assertTrue(actual2.equals(A2));
     }
     @Test
-    public void cryptTest2() {
+    public void cryptTest2() throws InvalidKeyException {
         // Given
         ROT13 cipher = new ROT13('a', 'n');
 
